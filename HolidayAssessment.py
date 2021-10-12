@@ -1,4 +1,4 @@
-import requests
+import requests as requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from datetime import date
@@ -193,7 +193,7 @@ def delHoliday(objectRemoved):
 
 def viewHoliday():
     # First thing the function does is ask the user for a year and week to filter by in the data.
-    selectYear = int(input('Which year would you like to filter by? Leave blank to fetch current year. Type here : '))
+    selectYear = str(input('Which year would you like to filter by? Leave blank to fetch current year. Type here : '))
     selectWeek = str(input('Which week would you like to filter by? Leave blank to fetch current week. Type week '
                            '# 1-52 : '))
     # This if statement catches if the person left the year option blank, if they did so, it will filter holidays by
